@@ -11,6 +11,9 @@ const fs = require("fs");
 const path = require("path");
 const pino = require("pino");
 const config = require("./utils");
+const { startHttpServer } = require("./server");
+let currentSock = null;
+startHttpServer(() => currentSock);
 
 // Logging via pino
 const logger = pino({
