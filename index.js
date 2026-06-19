@@ -53,7 +53,7 @@ async function startBot() {
   logger.info(`Using Baileys v${version.join(".")}, Latest: ${isLatest}`);
 
   const sock = makeWASocket({
-    currentSock = sock;
+    currentSock = sock,
     version,
     auth: state,
     printQRInTerminal: false,
